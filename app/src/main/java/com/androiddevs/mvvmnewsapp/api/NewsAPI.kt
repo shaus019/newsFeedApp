@@ -21,7 +21,7 @@ interface NewsAPI {
      * Include our api key so the newsAPI knows who is making the request.
      * @return response which is of type NewsResponse
      */
-    @GET("v2/top_headlines")
+    @GET("v2/top-headlines")
     suspend fun getBreakingNews(
         @Query("country")
         countryCode: String = "nz",

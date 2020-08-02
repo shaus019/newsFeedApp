@@ -22,7 +22,7 @@ class NewsViewModel (
     //variable for breakingNewsPage here so the viewModel does not get destroyed when we rotate it
     val breakingNewsPage = 1
 
-    init {
+   init {
         getBreakingNews("nz")
     }
 
