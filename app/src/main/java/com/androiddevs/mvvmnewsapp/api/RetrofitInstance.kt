@@ -34,7 +34,7 @@ class RetrofitInstance {
          * return a retrofit and pass the class of our interface.
          * This is the actual api object that we will bea ble to use from every where to make our actual network requests.
          */
-        val api by lazy {
+        val api: NewsAPI by lazy {
             retrofit.create(NewsAPI::class.java)
         }
     }

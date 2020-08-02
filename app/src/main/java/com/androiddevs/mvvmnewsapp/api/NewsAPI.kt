@@ -1,6 +1,6 @@
 package com.androiddevs.mvvmnewsapp.api
 
-import com.androiddevs.mvvmnewsapp.models.NewsResonse
+import com.androiddevs.mvvmnewsapp.models.NewsResponse
 import com.androiddevs.mvvmnewsapp.util.Constants.Companion.API_KEY
 import retrofit2.Response
 import retrofit2.http.GET
@@ -21,15 +21,15 @@ interface NewsAPI {
      * Include our api key so the newsAPI knows who is making the request.
      * @return response which is of type NewsResponse
      */
-    @GET("v2/top_headlines")
+    @GET("v2/top-headlines")
     suspend fun getBreakingNews(
         @Query("country")
-        countryCode: String = "pk",
+        countryCode: String = "nz",
         @Query("page")
         pageNumber: Int = 1,
         @Query("apiKey")
         apiKey: String = API_KEY
-    ): Response<NewsResonse>
+    ): Response<NewsResponse>
 
     @GET("v2/everything")
     suspend fun searchForNews(
@@ -39,5 +39,5 @@ interface NewsAPI {
         pageNumber: Int = 1,
         @Query("apiKey")
         apiKey: String = API_KEY
-    ): Response<NewsResonse>
+    ): Response<NewsResponse>
 }
